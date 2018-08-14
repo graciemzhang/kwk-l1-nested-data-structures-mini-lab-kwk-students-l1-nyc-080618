@@ -7,8 +7,23 @@ ingredients = [
 ]
 
 def sandwich_request(ingredients, order) 
-  # your code here!
+  response = true
+  
+  ingredients.each do |ing|
+      if ing[0] != order[0] || ing[0] != order[1] || ing[0] != order[2]
+        response = false
+      end
+      if ing[1] != order[0] || ing[1] != order[1] || ing[1] != order[2]
+        response = false
+      end
+      if ing[2] != order[0] || ing[2] != order[1] || ing[2] != order[2]
+        response = false
+      end
+  end
 end
+    
+
+  # your code here!
 
 # example city_info hash
 cities = {
